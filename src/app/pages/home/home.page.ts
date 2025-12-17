@@ -51,6 +51,7 @@ export class HomePage {
   }
 
   openCategory(type: 'light' | 'water', value: string) {
-    this.router.navigate(['/plants', type, value]);
-  }
+  this.router.navigate(['/tabs/list', type, value]);
+}
+
 }
