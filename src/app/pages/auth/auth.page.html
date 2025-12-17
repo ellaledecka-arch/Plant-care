@@ -1,0 +1,31 @@
+<ion-content class="ion-padding">
+  <div class="auth-container">
+    <h2>{{ isLogin ? 'Login' : 'Sign up' }}</h2>
+
+    <ion-item>
+      <ion-input
+        label="Email"
+        labelPlacement="stacked"
+        type="email"
+        [(ngModel)]="email">
+      </ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-input
+        label="Password"
+        labelPlacement="stacked"
+        type="password"
+        [(ngModel)]="password">
+      </ion-input>
+    </ion-item>
+
+    <ion-button expand="block" (click)="submit()">
+      {{ isLogin ? 'Login' : 'Sign up' }}
+    </ion-button>
+
+    <ion-button fill="clear" size="small" (click)="toggleMode()">
+      {{ isLogin ? 'Create account' : 'Already have an account?' }}
+    </ion-button>
+  </div>
+</ion-content>
