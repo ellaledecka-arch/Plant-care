@@ -3,5 +3,4 @@ export interface CareHack {
   title: string;
   description: string;
   content: string;
-  image: string;
 }

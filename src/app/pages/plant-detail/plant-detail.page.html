@@ -1,4 +1,4 @@
-<ion-header translucent>
+<ion-header>
   <ion-toolbar>
     <ion-buttons slot="start">
       <ion-back-button defaultHref="/tabs/home"></ion-back-button>
@@ -6,67 +6,66 @@
   </ion-toolbar>
 </ion-header>
 
-<ion-content *ngIf="plant" fullscreen>
+<ion-content *ngIf="plant">
 
   <!-- IMAGE CAROUSEL -->
-  <swiper-container
-    slides-per-view="1"
-    pagination="true"
-    class="image-swiper"
-  >
+  <swiper-container slides-per-view="1" pagination="true">
     <swiper-slide *ngFor="let img of plant.images">
-      <ion-img
-        [src]="img"
-        class="plant-image"
-      ></ion-img>
+      <img [src]="img" style="width: 100%; height: auto;" />
     </swiper-slide>
   </swiper-container>
 
   <!-- TITLE + FAVORITE -->
-  <div class="title-row">
-    <h1 class="plant-title">{{ plant.name }}</h1>
-
-    <ion-button
-      fill="clear"
-      class="favorite-btn"
-      (click)="toggleFavorite()"
-    >
+  <ion-item lines="none">
+    <ion-label>
+      <h1>{{ plant.name }}</h1>
+    </ion-label>
+    <ion-button fill="clear" (click)="toggleFavorite()">
       <ion-icon
         [name]="isFavorite ? 'heart' : 'heart-outline'"
-        class="heart-icon"
-        [class.active]="isFavorite"
-      ></ion-icon>
+        color="danger">
+      </ion-icon>
     </ion-button>
-  </div>
+  </ion-item>
 
-  <!-- CARE CONTENT CARD -->
-  <div class="care-card">
+  <!-- CARE ARTICLE -->
+  <ion-list>
 
-    <section class="care-section">
-      <h2>Placement</h2>
-      <p>{{ plant.care.placement }}</p>
-    </section>
+    <ion-item>
+      <ion-label>
+        <h2>Placement</h2>
+        <p>{{ plant.care.placement }}</p>
+      </ion-label>
+    </ion-item>
 
-    <section class="care-section">
-      <h2>Watering</h2>
-      <p>{{ plant.care.watering }}</p>
-    </section>
+    <ion-item>
+      <ion-label>
+        <h2>Watering</h2>
+        <p>{{ plant.care.watering }}</p>
+      </ion-label>
+    </ion-item>
 
-    <section class="care-section">
-      <h2>Cleaning</h2>
-      <p>{{ plant.care.cleaning }}</p>
-    </section>
+    <ion-item>
+      <ion-label>
+        <h2>Cleaning</h2>
+        <p>{{ plant.care.cleaning }}</p>
+      </ion-label>
+    </ion-item>
 
-    <section class="care-section">
-      <h2>Propagation</h2>
-      <p>{{ plant.care.propagation }}</p>
-    </section>
+    <ion-item>
+      <ion-label>
+        <h2>Propagation</h2>
+        <p>{{ plant.care.propagation }}</p>
+      </ion-label>
+    </ion-item>
 
-    <section class="care-section">
-      <h2>Fertilization</h2>
-      <p>{{ plant.care.fertilization }}</p>
-    </section>
+    <ion-item>
+      <ion-label>
+        <h2>Fertilization</h2>
+        <p>{{ plant.care.fertilization }}</p>
+      </ion-label>
+    </ion-item>
 
-  </div>
+  </ion-list>
 
 </ion-content>

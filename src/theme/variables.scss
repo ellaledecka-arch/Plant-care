@@ -1,2 +1,27 @@
-// For information on how to create your own theme, please refer to:
-// https://ionicframework.com/docs/theming/
+:root {
+  /* PRIMARY – zelená z Figmy */
+  --ion-color-primary: #cfe5d2;
+  --ion-color-primary-rgb: 207, 229, 210;
+  --ion-color-primary-contrast: #000000;
+
+  /* BACKGROUND */
+  --ion-background-color: #f5f5f5;
+
+  /* TEXT */
+  --ion-text-color: #1f1f1f;
+
+  /* CARDS */
+  --ion-card-background: #ffffff;
+
+  /* FONT */
+  --ion-font-family: 'Roboto', system-ui, -apple-system, BlinkMacSystemFont;
+}
+@media (prefers-color-scheme: dark) {
+  body {
+    --ion-background-color: #f5f5f5;
+    --ion-text-color: #1f1f1f;
+
+    --ion-item-background: #ffffff;
+    --ion-card-background: #ffffff;
+  }
+}
