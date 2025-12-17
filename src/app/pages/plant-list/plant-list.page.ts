@@ -9,8 +9,10 @@ import { Plant } from '../../models/plant.model';
 
 @Component({
   standalone: true,
+  selector: 'app-plant-list',
   imports: [IonicModule, CommonModule],
   templateUrl: './plant-list.page.html',
+  styleUrls: ['./plant-list.page.scss'],
 })
 export class PlantListPage {
 
@@ -25,22 +27,28 @@ export class PlantListPage {
   ) {}
 
   async ngOnInit() {
-    // filter
-    this.route.queryParams.subscribe(params => {
-      const filter = params['filter'];
 
-      if (filter === 'low-light') {
-        this.plants = this.plantService.getLowLight();
-      } else if (filter === 'easy-water') {
-        this.plants = this.plantService.getEasyWater();
-      } else {
-        this.plants = this.plantService.getAll();
-      }
-    });
-
-    // favorites
+    // 🔹 načítanie favorites
     const ids = await this.favorites.getPlantIds();
     this.favoriteIds = new Set(ids);
+
+    // 🔹 filtrovanie podľa route parametrov
+    this.route.paramMap.subscribe(params => {
+      const type = params.get('type');   // light | water
+      const value = params.get('value'); // low | medium | high | bright | direct
+
+      const allPlants = this.plantService.getAll();
+
+      if (type === 'light' && value) {
+        this.plants = allPlants.filter(p => p.light === value);
+      } 
+      else if (type === 'water' && value) {
+        this.plants = allPlants.filter(p => p.water === value);
+      } 
+      else {
+        this.plants = allPlants;
+      }
+    });
   }
 
   openDetail(id: number) {

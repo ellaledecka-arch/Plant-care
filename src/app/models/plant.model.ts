@@ -1,8 +1,8 @@
 export interface Plant {
   id: number;
   name: string;
-  light: 'low' | 'bright';
-  water: 'low' | 'medium';
+  light: 'low' | 'bright' | 'direct';
+  water: 'low' | 'medium' | 'high';
   images: string[];
   care: {
     placement: string;

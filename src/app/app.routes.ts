@@ -42,7 +42,14 @@ export const routes: Routes = [
   loadComponent: () =>
     import('./pages/care-hack-detail/care-hack-detail.page')
       .then(m => m.CareHackDetailPage),
+},
+{
+  path: 'plants/:type/:value',
+  loadComponent: () =>
+    import('./pages/plant-list/plant-list.page')
+      .then(m => m.PlantListPage),
 }
+
 
 
 ];

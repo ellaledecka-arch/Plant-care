@@ -31,20 +31,100 @@
   <!-- LOW LIGHT -->
   <div class="section-header">
     <h2 class="section-title small">Low light</h2>
-    <span class="see-all">see all</span>
+    <span class="see-all" (click)="openCategory('light', 'low')">
+  see all
+</span>
+
   </div>
 
-  <swiper-container
-    slides-per-view="2.1"
-    space-between="12"
-    class="plant-swiper"
-  >
+  <swiper-container slides-per-view="2.1" space-between="12" class="plant-swiper">
     <swiper-slide *ngFor="let plant of lowLightPlants">
       <div class="plant-card" (click)="openDetail(plant.id)">
-        <ion-img
-          [src]="plant.images[0]"
-          class="plant-thumb"
-        ></ion-img>
+        <ion-img [src]="plant.images[0]" class="plant-thumb"></ion-img>
+        <p class="plant-name">{{ plant.name }}</p>
+      </div>
+    </swiper-slide>
+  </swiper-container>
+
+  <!-- BRIGHT LIGHT -->
+  <div class="section-header">
+    <h2 class="section-title small">Bright light</h2>
+    <span class="see-all" (click)="openCategory('light', 'bright')">
+  see all
+</span>
+
+
+  </div>
+
+  <swiper-container slides-per-view="2.1" space-between="12" class="plant-swiper">
+    <swiper-slide *ngFor="let plant of brightLightPlants">
+      <div class="plant-card" (click)="openDetail(plant.id)">
+        <ion-img [src]="plant.images[0]" class="plant-thumb"></ion-img>
+        <p class="plant-name">{{ plant.name }}</p>
+      </div>
+    </swiper-slide>
+  </swiper-container>
+
+  <!-- DIRECT LIGHT -->
+  <div class="section-header">
+    <h2 class="section-title small">Direct light</h2>
+    <span class="see-all" (click)="openCategory('light', 'direct')">
+  see all
+</span>
+
+
+  </div>
+
+  <swiper-container slides-per-view="2.1" space-between="12" class="plant-swiper">
+    <swiper-slide *ngFor="let plant of directLightPlants">
+      <div class="plant-card" (click)="openDetail(plant.id)">
+        <ion-img [src]="plant.images[0]" class="plant-thumb"></ion-img>
+        <p class="plant-name">{{ plant.name }}</p>
+      </div>
+    </swiper-slide>
+  </swiper-container>
+
+  <!-- WATER LOW -->
+  <div class="section-header">
+    <h2 class="section-title small">Low water</h2>
+    <span class="see-all" (click)="openCategory('water', 'low')">see all</span>
+
+  </div>
+
+  <swiper-container slides-per-view="2.1" space-between="12" class="plant-swiper">
+    <swiper-slide *ngFor="let plant of lowWaterPlants">
+      <div class="plant-card" (click)="openDetail(plant.id)">
+        <ion-img [src]="plant.images[0]" class="plant-thumb"></ion-img>
+        <p class="plant-name">{{ plant.name }}</p>
+      </div>
+    </swiper-slide>
+  </swiper-container>
+
+  <!-- WATER MEDIUM -->
+  <div class="section-header">
+    <h2 class="section-title small">Medium water</h2>
+    <span class="see-all" (click)="openCategory('water', 'medium')">see all</span>
+  </div>
+
+  <swiper-container slides-per-view="2.1" space-between="12" class="plant-swiper">
+    <swiper-slide *ngFor="let plant of mediumWaterPlants">
+      <div class="plant-card" (click)="openDetail(plant.id)">
+        <ion-img [src]="plant.images[0]" class="plant-thumb"></ion-img>
+        <p class="plant-name">{{ plant.name }}</p>
+      </div>
+    </swiper-slide>
+  </swiper-container>
+
+  <!-- WATER HIGH -->
+  <div class="section-header">
+    <h2 class="section-title small">High water</h2>
+    <span class="see-all" (click)="openCategory('water', 'high')">see all</span>
+  </div>
+
+  <swiper-container slides-per-view="2.1" space-between="12" class="plant-swiper">
+    <swiper-slide *ngFor="let plant of highWaterPlants">
+      <div class="plant-card" (click)="openDetail(plant.id)">
+        <ion-img [src]="plant.images[0]" class="plant-thumb"></ion-img>
         <p class="plant-name">{{ plant.name }}</p>
       </div>
     </swiper-slide>
