@@ -1,13 +1,30 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>home</ion-title>
-  </ion-toolbar>
-</ion-header>
+<ion-content>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">home</ion-title>
-    </ion-toolbar>
-  </ion-header>
+  <h2 class="section-title">Top plants of the week</h2>
+
+  <swiper-container slides-per-view="1.2" space-between="10">
+    <swiper-slide *ngFor="let plant of topPlants">
+      <ion-card (click)="openDetail(plant.id)">
+        <img [src]="plant.images[0]" />
+        <ion-card-content>{{ plant.name }}</ion-card-content>
+      </ion-card>
+    </swiper-slide>
+  </swiper-container>
+
+  <div class="section-header">
+    <h2>Low light</h2>
+    <ion-button fill="clear" size="small" (click)="openCategory('low-light')">
+      See all
+    </ion-button>
+  </div>
+
+  <swiper-container slides-per-view="2.2" space-between="10">
+    <swiper-slide *ngFor="let plant of lowLightPlants">
+      <ion-card (click)="openDetail(plant.id)">
+        <img [src]="plant.images[0]" />
+        <ion-card-content>{{ plant.name }}</ion-card-content>
+      </ion-card>
+    </swiper-slide>
+  </swiper-container>
+
 </ion-content>
