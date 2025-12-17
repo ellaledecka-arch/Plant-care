@@ -1,12 +1,31 @@
 ion-tab-bar {
-  background: #d8ecd6;
-  border-top: none;
+  --background: #cfe5d2;
+  --border: none;
 }
+
+/* ---------- TAB BUTTON ---------- */
 
 ion-tab-button {
-  color: #5f6f5f;
+  --color: #5f6f61;
+  --color-selected: #1f1f1f;
+  font-size: 0.85rem;
 }
 
-ion-tab-button.tab-selected {
-  color: #2f4f2f;
+/* ---------- ICONS ---------- */
+
+ion-tab-button ion-icon {
+  color: #5f6f61;
+  font-size: 22px;
+}
+
+/* ACTIVE TAB */
+
+ion-tab-button.tab-selected ion-icon {
+  color: #1f1f1f;
+}
+
+/* LABEL (text pod ikonou) */
+
+ion-tab-button ion-label {
+  font-size: 12px;
 }
