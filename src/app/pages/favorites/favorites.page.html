@@ -1,15 +1,44 @@
 <ion-content>
-  <ion-list *ngIf="plants.length; else empty">
-    <ion-item *ngFor="let plant of plants" (click)="openDetail(plant.id)">
-      <ion-label>
-        <h2>{{ plant.name }}</h2>
-      </ion-label>
-    </ion-item>
-  </ion-list>
 
+  <!-- FAVORITE PLANTS -->
+  <div *ngIf="plants.length; else empty">
+
+    <div *ngFor="let plant of plants">
+
+      <ion-card class="plant-card" (click)="openDetail(plant.id)">
+        <div class="card-content">
+
+          <!-- IMAGE -->
+          <ion-img
+            class="card-img"
+            [src]="plant.images[0]"
+          ></ion-img>
+
+          <!-- TEXT -->
+          <div class="card-text">
+            <h2>{{ plant.name }}</h2>
+            <p>{{ plant.care.placement }}</p>
+          </div>
+
+          <!-- HEART (always active here) -->
+          <ion-icon
+            name="heart"
+            class="heart-icon active"
+          ></ion-icon>
+
+        </div>
+      </ion-card>
+
+    </div>
+
+  </div>
+
+  <!-- EMPTY STATE -->
   <ng-template #empty>
-    <ion-text class="ion-padding">
-      No favorite plants yet.
-    </ion-text>
+    <div class="empty-state">
+      <ion-icon name="heart-outline"></ion-icon>
+      <p>No favorite plants yet</p>
+    </div>
   </ng-template>
+
 </ion-content>

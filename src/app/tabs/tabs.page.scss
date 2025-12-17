@@ -1,3 +1,12 @@
+ion-tab-bar {
+  background: #d8ecd6;
+  border-top: none;
+}
+
 ion-tab-button {
-  font-size: 0.85rem;
+  color: #5f6f5f;
+}
+
+ion-tab-button.tab-selected {
+  color: #2f4f2f;
 }

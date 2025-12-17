@@ -1,29 +1,52 @@
-<ion-content>
+<ion-content fullscreen>
 
-  <h2 class="section-title">Top plants of the week</h2>
+  <!-- TOP OF THE WEEK -->
+  <h2 class="section-title">This week’s top</h2>
 
-  <swiper-container slides-per-view="1.2" space-between="10">
+  <swiper-container
+    slides-per-view="1"
+    pagination="true"
+    class="top-swiper"
+  >
     <swiper-slide *ngFor="let plant of topPlants">
-      <ion-card (click)="openDetail(plant.id)">
-        <img [src]="plant.images[0]" />
-        <ion-card-content>{{ plant.name }}</ion-card-content>
-      </ion-card>
+      <div class="top-card" (click)="openDetail(plant.id)">
+        <ion-img
+          [src]="plant.images[0]"
+          class="top-image"
+        ></ion-img>
+
+        <div class="top-text">
+          <h3>{{ plant.name }}</h3>
+          <p>{{ plant.care.watering }}</p>
+        </div>
+
+        <ion-icon
+          name="heart-outline"
+          class="card-heart"
+        ></ion-icon>
+      </div>
     </swiper-slide>
   </swiper-container>
 
+  <!-- LOW LIGHT -->
   <div class="section-header">
-    <h2>Low light</h2>
-    <ion-button fill="clear" size="small" (click)="openCategory('low-light')">
-      See all
-    </ion-button>
+    <h2 class="section-title small">Low light</h2>
+    <span class="see-all">see all</span>
   </div>
 
-  <swiper-container slides-per-view="2.2" space-between="10">
+  <swiper-container
+    slides-per-view="2.1"
+    space-between="12"
+    class="plant-swiper"
+  >
     <swiper-slide *ngFor="let plant of lowLightPlants">
-      <ion-card (click)="openDetail(plant.id)">
-        <img [src]="plant.images[0]" />
-        <ion-card-content>{{ plant.name }}</ion-card-content>
-      </ion-card>
+      <div class="plant-card" (click)="openDetail(plant.id)">
+        <ion-img
+          [src]="plant.images[0]"
+          class="plant-thumb"
+        ></ion-img>
+        <p class="plant-name">{{ plant.name }}</p>
+      </div>
     </swiper-slide>
   </swiper-container>
 

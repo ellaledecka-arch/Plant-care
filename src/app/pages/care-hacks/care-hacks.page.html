@@ -1,16 +1,33 @@
-<ion-item *ngFor="let hack of hacks">
-  <ion-label (click)="openDetail(hack.id)">
-    <h2>{{ hack.title }}</h2>
-    <p>{{ hack.description }}</p>
-  </ion-label>
+<ion-content>
 
-  <ion-button
-    fill="clear"
-    slot="end"
-    (click)="toggleFavorite(hack.id); $event.stopPropagation()">
-    <ion-icon
-      [name]="isFavorite(hack.id) ? 'heart' : 'heart-outline'"
-      color="danger">
-    </ion-icon>
-  </ion-button>
-</ion-item>
+  <div *ngFor="let hack of hacks">
+
+    <ion-card class="hack-card" (click)="openDetail(hack.id)">
+      <div class="card-content">
+
+        <!-- IMAGE -->
+        <ion-img
+          class="card-img"
+          [src]="hack.image"
+        ></ion-img>
+
+        <!-- TEXT -->
+        <div class="card-text">
+          <h2>{{ hack.title }}</h2>
+          <p>{{ hack.description }}</p>
+        </div>
+
+        <!-- FAVORITE -->
+        <ion-icon
+          [name]="isFavorite(hack.id) ? 'heart' : 'heart-outline'"
+          class="heart-icon"
+          [class.active]="isFavorite(hack.id)"
+          (click)="toggleFavorite(hack.id); $event.stopPropagation()"
+        ></ion-icon>
+
+      </div>
+    </ion-card>
+
+  </div>
+
+</ion-content>

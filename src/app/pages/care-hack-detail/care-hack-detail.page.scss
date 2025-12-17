@@ -8,3 +8,12 @@ p {
   font-size: 1rem;
   line-height: 1.6;
 }
+
+.heart-icon {
+  font-size: 22px;
+  color: #9fb89f; // svetlozelená
+}
+
+.heart-icon.active {
+  color: #2f4f2f; // tmavozelená (favorite)
+}

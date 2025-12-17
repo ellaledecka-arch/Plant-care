@@ -1,16 +1,34 @@
-<ion-item *ngFor="let plant of plants">
-  <ion-label (click)="openDetail(plant.id)">
-    <h2>{{ plant.name }}</h2>
-    <p>{{ plant.light }} light · {{ plant.water }} water</p>
-  </ion-label>
+<ion-content>
 
-  <ion-button
-    fill="clear"
-    slot="end"
-    (click)="toggleFavorite(plant.id); $event.stopPropagation()">
-    <ion-icon
-      [name]="isFavorite(plant.id) ? 'heart' : 'heart-outline'"
-      color="danger">
-    </ion-icon>
-  </ion-button>
-</ion-item>
+  <div *ngFor="let plant of plants">
+
+    <ion-card class="plant-card" (click)="openDetail(plant.id)">
+      <div class="card-content">
+
+        <!-- IMAGE -->
+        <ion-img
+          class="card-img"
+          [src]="plant.images[0]"
+        ></ion-img>
+
+        <!-- TEXT -->
+        <div class="card-text">
+          <h2>{{ plant.name }}</h2>
+          <p>
+            {{ plant.care.placement }}
+          </p>
+        </div>
+
+        <!-- FAVORITE -->
+        <ion-icon
+          [name]="isFavorite(plant.id) ? 'heart' : 'heart-outline'"
+          class="heart-icon"
+          (click)="toggleFavorite(plant.id); $event.stopPropagation()"
+        ></ion-icon>
+
+      </div>
+    </ion-card>
+
+  </div>
+
+</ion-content>
