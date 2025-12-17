@@ -21,7 +21,11 @@ export const routes: Routes = [
         loadComponent: () =>
           import('../pages/favorites/favorites.page').then(m => m.FavoritesPage),
       },
-      
+      {
+        path: 'care-hacks',
+        loadComponent: () =>
+          import('../pages/care-hacks/care-hacks.page').then(m => m.CareHacksPage),
+      },
       {
         path: '',
         redirectTo: '/tabs/home',

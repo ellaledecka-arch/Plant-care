@@ -5,7 +5,6 @@ import { Router } from '@angular/router';
 
 import { PlantService } from '../../services/plant.service';
 import { Plant } from '../../models/plant.model';
-
 import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 
 @Component({

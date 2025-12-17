@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { IonicModule } from '@ionic/angular';
 import { CommonModule } from '@angular/common';
 import { Router } from '@angular/router';
+
 import { FavoritesService } from '../../services/favorites.service';
 import { PlantService } from '../../services/plant.service';
 import { Plant } from '../../models/plant.model';
@@ -12,6 +13,7 @@ import { Plant } from '../../models/plant.model';
   templateUrl: './favorites.page.html',
 })
 export class FavoritesPage {
+
   plants: Plant[] = [];
 
   constructor(
@@ -21,9 +23,12 @@ export class FavoritesPage {
   ) {}
 
   async ionViewWillEnter() {
-    const ids = await this.favorites.getIds();
+    const ids = await this.favorites.getPlantIds();
+
     this.plants = ids
-      .map(id => this.plantService.getAll().find(p => p.id === id))
+      .map((id: number) =>
+        this.plantService.getAll().find(p => p.id === id)
+      )
       .filter(Boolean) as Plant[];
   }
 

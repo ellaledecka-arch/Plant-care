@@ -19,9 +19,6 @@ export const routes: Routes = [
   {
     path: 'home',
     loadComponent: () => import('./pages/home/home.page').then( m => m.HomePage)
-  },  {
-    path: 'home',
-    loadComponent: () => import('./pages/home/home.page').then( m => m.HomePage)
   },
   {
     path: 'plant-list',
@@ -32,8 +29,20 @@ export const routes: Routes = [
     loadComponent: () => import('./pages/favorites/favorites.page').then( m => m.FavoritesPage)
   },
   {
-    path: 'favorites',
-    loadComponent: () => import('./pages/favorites/favorites.page').then( m => m.FavoritesPage)
+    path: 'care-hacks',
+    loadComponent: () => import('./pages/care-hacks/care-hacks.page').then( m => m.CareHacksPage)
   },
+  {
+  path: 'plant/:id',
+  loadComponent: () =>
+    import('./pages/plant-detail/plant-detail.page').then(m => m.PlantDetailPage),
+},
+{
+  path: 'care-hack/:id',
+  loadComponent: () =>
+    import('./pages/care-hack-detail/care-hack-detail.page')
+      .then(m => m.CareHackDetailPage),
+}
+
 
 ];
