@@ -2,6 +2,8 @@ import { Component } from '@angular/core';
 import { IonicModule } from '@ionic/angular';
 import { CommonModule } from '@angular/common';
 import { ActivatedRoute, Router } from '@angular/router';
+//import { IonIcon } from '@ionic/angular/standalone';
+
 
 import { PlantService } from '../../services/plant.service';
 import { FavoritesService } from '../../services/favorites.service';
@@ -10,7 +12,7 @@ import { Plant } from '../../models/plant.model';
 @Component({
   standalone: true,
   selector: 'app-plant-list',
-  imports: [IonicModule, CommonModule],
+  imports: [IonicModule, CommonModule, /*IonIcon*/],
   templateUrl: './plant-list.page.html',
   styleUrls: ['./plant-list.page.scss'],
 })

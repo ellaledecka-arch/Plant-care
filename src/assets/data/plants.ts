@@ -6,7 +6,12 @@ export const PLANTS: Plant[] = [
     name: 'Monstera',
     light: 'bright',
     water: 'medium',
-    images: ['assets/img/monstera1.jpg'],
+    images: [
+        'assets/img/plants/monstera-1.png',
+        'assets/img/plants/monstera-2.jpg',
+        'assets/img/plants/monstera-3.jpg',
+        'assets/img/plants/monstera-4.jpg'
+    ],
     care: {
       placement: 'Bright, indirect light.',
       watering: 'Water when top soil is dry.',
@@ -20,7 +25,11 @@ export const PLANTS: Plant[] = [
     name: 'Snake Plant',
     light: 'low',
     water: 'low',
-    images: ['assets/img/snake1.jpg'],
+    images: [
+        'assets/img/plants/snake-plant-1.png',
+        'assets/img/plants/snake-plant-2.jpg',
+        'assets/img/plants/snake-plant-3.jpg'
+        ],
     care: {
       placement: 'Low to bright indirect light.',
       watering: 'Water sparingly; allow soil to dry completely.',
@@ -34,7 +43,12 @@ export const PLANTS: Plant[] = [
     name: 'Pothos',
     light: 'low',
     water: 'medium',
-    images: ['assets/img/pothos1.jpg'],
+    images: [
+        'assets/img/plants/pothos-1.png',
+        'assets/img/plants/pothos-2.jpg',
+        'assets/img/plants/pothos-3.jpg',
+        'assets/img/plants/pothos-4.jpg'
+    ],
     care: {
       placement: 'Low to bright indirect light.',
       watering: 'Water when top layer of soil is dry.',
@@ -48,7 +62,12 @@ export const PLANTS: Plant[] = [
     name: 'ZZ Plant',
     light: 'low',
     water: 'low',
-    images: ['assets/img/zzplant1.jpg'],
+    images: [
+        'assets/img/plants/zz-plant-1.png',
+        'assets/img/plants/zz-plant-2.jpg',
+        'assets/img/plants/zz-plant-3.jpg',
+        'assets/img/plants/zz-plant-4.jpg'
+    ],
     care: {
       placement: 'Low to bright indirect light.',
       watering: 'Water every 2–3 weeks.',
@@ -62,7 +81,11 @@ export const PLANTS: Plant[] = [
     name: 'Cast Iron Plant',
     light: 'low',
     water: 'low',
-    images: ['assets/img/castiron1.jpg'],
+    images: [
+        'assets/img/plants/cast-iron-plant-1.png',
+        'assets/img/plants/cast-iron-plant-2.jpg',
+        'assets/img/plants/cast-iron-plant-3.jpg'
+    ],
     care: {
       placement: 'Low light, shaded areas.',
       watering: 'Water sparingly.',
@@ -76,7 +99,12 @@ export const PLANTS: Plant[] = [
     name: 'Spider Plant',
     light: 'bright',
     water: 'medium',
-    images: ['assets/img/spider1.jpg'],
+    images: [
+        'assets/img/plants/spider-plant-1.png',
+        'assets/img/plants/spider-plant-2.jpg',
+        'assets/img/plants/spider-plant-3.jpg',
+        'assets/img/plants/spider-plant-4.jpg'
+    ],
     care: {
       placement: 'Bright indirect light.',
       watering: 'Water when soil is partly dry.',
@@ -90,7 +118,12 @@ export const PLANTS: Plant[] = [
     name: 'Rubber Tree',
     light: 'bright',
     water: 'medium',
-    images: ['assets/img/rubber1.jpg'],
+    images: [
+        'assets/img/plants/rubber-plant-1.png',
+        'assets/img/plants/rubber-plant-2.jpg',
+        'assets/img/plants/rubber-plant-3.jpg',
+        'assets/img/plants/rubber-plant-4.jpg'
+    ],
     care: {
       placement: 'Bright indirect light.',
       watering: 'Water when top soil dries.',
@@ -104,7 +137,11 @@ export const PLANTS: Plant[] = [
     name: 'Prayer Plant',
     light: 'bright',
     water: 'high',
-    images: ['assets/img/prayer1.jpg'],
+    images: [
+        'assets/img/plants/prayer-plant-1.png',
+        'assets/img/plants/prayer-plant-2.jpg',
+        'assets/img/plants/prayer-plant-3.jpg'
+    ],
     care: {
       placement: 'Bright indirect light.',
       watering: 'Keep soil consistently moist.',
@@ -118,7 +155,12 @@ export const PLANTS: Plant[] = [
     name: 'Fiddle Leaf Fig',
     light: 'bright',
     water: 'medium',
-    images: ['assets/img/fiddle1.jpg'],
+    images: [
+        'assets/img/plants/fiddle-fig-1.png',
+        'assets/img/plants/fiddle-fig-2.jpg',
+        'assets/img/plants/fiddle-fig-3.jpg',
+        'assets/img/plants/fiddle-fig-4.jpg'
+    ],
     care: {
       placement: 'Bright indirect light.',
       watering: 'Water when top soil is dry.',
@@ -132,7 +174,12 @@ export const PLANTS: Plant[] = [
     name: 'Aloe Vera',
     light: 'direct',
     water: 'low',
-    images: ['assets/img/aloe1.jpg'],
+    images: [
+        'assets/img/plants/aloe-vera-1.png',
+        'assets/img/plants/aloe-vera-2.jpg',
+        'assets/img/plants/aloe-vera-3.jpg',
+        'assets/img/plants/aloe-vera-4.jpg'
+    ],
     care: {
       placement: 'Direct sunlight.',
       watering: 'Water deeply but infrequently.',
@@ -146,7 +193,12 @@ export const PLANTS: Plant[] = [
     name: 'Cactus',
     light: 'direct',
     water: 'low',
-    images: ['assets/img/cactus1.jpg'],
+    images: [
+        'assets/img/plants/cactus-1.png',
+        'assets/img/plants/cactus-2.jpg',
+        'assets/img/plants/cactus-3.jpg',
+        'assets/img/plants/cactus-4.jpg'
+    ],
     care: {
       placement: 'Direct sunlight.',
       watering: 'Very minimal watering.',
@@ -160,7 +212,12 @@ export const PLANTS: Plant[] = [
     name: 'Jade Plant',
     light: 'direct',
     water: 'low',
-    images: ['assets/img/jade1.jpg'],
+    images: [
+        'assets/img/plants/jade-plant-1.png',
+        'assets/img/plants/jade-plant-2.jpg',
+        'assets/img/plants/jade-plant-3.jpg',
+        'assets/img/plants/jade-plant-4.jpg'
+    ],
     care: {
       placement: 'Bright to direct sunlight.',
       watering: 'Allow soil to dry completely.',

@@ -2,6 +2,8 @@ import { Component } from '@angular/core';
 import { IonicModule } from '@ionic/angular';
 import { CommonModule } from '@angular/common';
 import { Router } from '@angular/router';
+//import { IonIcon } from '@ionic/angular/standalone';
+
 
 import { CareHacksService } from '../../services/care-hacks.service';
 import { FavoritesService } from '../../services/favorites.service';
@@ -9,7 +11,7 @@ import { CareHack } from '../../models/care-hacks.model';
 
 @Component({
   standalone: true,
-  imports: [IonicModule, CommonModule],
+  imports: [IonicModule, CommonModule , /*IonIcon*/],
   templateUrl: './care-hacks.page.html',
 })
 export class CareHacksPage {

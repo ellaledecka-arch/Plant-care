@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { IonicModule } from '@ionic/angular';
 import { Router } from '@angular/router';
+//import { IonIcon } from '@ionic/angular/standalone'; 
 import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 
 import { PlantService } from '../../services/plant.service';
@@ -12,8 +13,8 @@ import { Plant } from '../../models/plant.model';
   selector: 'app-home',
   templateUrl: './home.page.html',
   styleUrls: ['./home.page.scss'],
-  imports: [IonicModule, CommonModule],
-  schemas: [CUSTOM_ELEMENTS_SCHEMA]
+  imports: [IonicModule, CommonModule, /*IonIcon*/],
+  schemas: [CUSTOM_ELEMENTS_SCHEMA],
 })
 export class HomePage {
 
